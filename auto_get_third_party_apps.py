@@ -118,20 +118,22 @@ if isFileExists(googleAppFilePath):
 
 import re
 import zipfile
+
+getApkInfo = "package: name='(\S+)' versionCode='(\d+)' versionName='(\S+)' platformBuildVersionName='\S+'"
+
+
 def getAppBaseInfo(appFilePath):
-    output = os.popen("./prebuilts/sdk/tools/linux/bin/aapt d badging %s" % appFilePath).read()
-    match = re.compile
+    output = os.popen(
+        "./../../../android/aosp/android-8.0.0_r16/prebuilts/sdk/tools/linux/bin/aapt d badging %s" % appFilePath).read()
+    match = re.compile(getApkInfo).match(output)
+    if not match:
+        raise Exception("con't not get package info")
+    package_name = match.group(1)
+    version_code = match.group(1)
+    version_name = match.group(1)
+    print(package_name)
+    print(version_code)
+    print(version_name)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+getAppBaseInfo("/home/xuwanjin/Downloads/software/shadowsocks-nightly-4.2.5.apk")
