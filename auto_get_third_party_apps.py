@@ -1,5 +1,6 @@
 import os
 import sys
+import re
 
 # system/priv-app
 # system/app
@@ -16,10 +17,12 @@ outDir = sys.argv[0]
 gmsFile = "vendor/google/products/gms.mk"
 googleAppFilePath = "vendor/google/apps"
 thirdPartyAppList = []
+googleAPpFIleList = []
+
 # googleAppFilePath = "/home/xuwanjin/xuwanjin_workserver/" \
 #                     "source/6739_2/ALPS-MP-N1.MP18-V1_AUS6739_66_N1_INHOUSE/" \
 #                     "vendor/google/apps"
-count = 0
+
 # 获取系统的所有的Apps
 with open("installed-files.txt", mode='r') as installedFile:
     for fileLine in installedFile.readlines():
@@ -36,7 +39,7 @@ with open("installed-files.txt", mode='r') as installedFile:
             # print(appFileArray[-1])
             # systemFile = {k: v for k, v in zip()}
 
-# 取出所有的第三方Apps,
+# 先获取所有的apps, 写入到一个文件 
 with open("custom.mk", mode='r') as customAppFile:
     with open('custom_app_only.txt', 'w') as customOnlyFile:
         for fileLine in customAppFile.readlines():
@@ -52,7 +55,7 @@ with open("custom.mk", mode='r') as customAppFile:
 
             if len(fileLine.strip()) != 0:
                 customOnlyFile.write(fileLine)
-
+# 把所有的文件放到一个列表当中去
 with open("custom_app_only.txt", 'r') as customAppOnlyFile:
     for fileLine in customAppOnlyFile.readlines():
 
@@ -73,7 +76,7 @@ with open("custom_app_only.txt", 'r') as customAppOnlyFile:
         thirdPartyAppList.append(appDirName)
         print(appDirName)
 
-print(sorted(thirdPartyAppList))  # now we get all the system third party apps.
+# print(sorted(thirdPartyAppList))  # now we get all the system third party apps.
 
 # 获取扫有的GMS包里面的apk
 # 首先遇到了PRODUCT_PACKAGES， 那么把下一行删掉
@@ -102,8 +105,10 @@ with open("gms.mk", mode='r') as customAppFile:
             if len(fileLine.strip()) != 0:
                 gmsOnlyApkFile.write(fileLine)
 
+    gmsOnlyApkFile.close()
 
-def isFileExists(filepath):
+
+def is_file_exists(filepath):
     if os.path.exists(googleAppFilePath):
         print(" file path exist")
         return True
@@ -112,28 +117,68 @@ def isFileExists(filepath):
         return False
 
 
-if isFileExists(googleAppFilePath):
+if is_file_exists(googleAppFilePath):
     googleAppFileList = os.listdir(googleAppFilePath)
     # print(sorted(googleAppFileList))
 
-import re
-import zipfile
-
 getApkInfo = "package: name='(\S+)' versionCode='(\d+)' versionName='(\S+)' platformBuildVersionName='\S+'"
+getApkAppNameInfo = "application: label='(\S+)' icon='(\S+)'"
+
+files_path = []
 
 
-def getAppBaseInfo(appFilePath):
-    output = os.popen(
-        "./../../../android/aosp/android-8.0.0_r16/prebuilts/sdk/tools/linux/bin/aapt d badging %s" % appFilePath).read()
-    match = re.compile(getApkInfo).match(output)
-    if not match:
-        raise Exception("con't not get package info")
-    package_name = match.group(1)
-    version_code = match.group(1)
-    version_name = match.group(1)
+# get application file name: a path
+def get_app_file_name_info(app_file_path):
+    file_members = os.listdir(app_file_path)
+    for file_member in file_members:
+        file_member_path = os.path.join(app_file_path, file_member)
+        if file_member_path.endswith(".apk"):
+            files_path.append(file_member_path)
+
+        if os.path.isdir(file_member_path):
+            get_app_file_name_info(file_member_path)
+
+    return files_path
+
+
+# 获取某一个apps的 package name, version name
+def get_app_base_info(app_file_path):
+    output_base = os.popen(
+        "aapt d badging %s" % app_file_path,
+        'r', 1).read()
+    match_app_base = re.compile(getApkInfo).match(output_base)
+    # application: label='Shadowsocks'
+    # app_package_info_str = str(output_base)
+    # print(app_package_info_str)
+    # for app_info_line in app_package_info_str.split('\n'):
+    #     if app_info_line.__contains__("application: label="):
+    #         app_info_line.split(" ")
+    #         print(app_info_line.split(" ")[1].strip('label=').lstrip("'").rstrip("'"))
+    #     # print(fileLine)
+
+    if not match_app_base:
+        raise Exception("can't not get package info")
+    output_base_application = os.popen(
+        "aapt d badging %s | grep \"application: label=\"" % app_file_path,
+        'r', 1).read()
+    print(str(output_base_application).strip("\n"))
+    match_app_base_application = re.compile(getApkAppNameInfo).match(output_base_application)
+    print(match_app_base_application.group(1))
+    app_name = match_app_base_application.group(1)
+    package_name = match_app_base.group(1)
+    version_code = match_app_base.group(2)
+    version_name = match_app_base.group(3)
     print(package_name)
     print(version_code)
     print(version_name)
+    return package_name, version_code, version_name, app_name
 
 
-getAppBaseInfo("/home/xuwanjin/Downloads/software/shadowsocks-nightly-4.2.5.apk")
+# a path
+app_files = get_app_file_name_info("/home/xuwanjin/Downloads/software/")
+print(app_files)
+# for app_file in app_files:
+
+#### Test
+for app_file in app_files:
+    get_app_base_info(app_file)
