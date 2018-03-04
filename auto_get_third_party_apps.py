@@ -1,6 +1,9 @@
 import os
-import sys
 import re
+import sys
+import xlwt
+
+from app_file_class import AppFile
 
 # system/priv-app
 # system/app
@@ -18,6 +21,14 @@ gmsFile = "vendor/google/products/gms.mk"
 googleAppFilePath = "vendor/google/apps"
 thirdPartyAppList = []
 googleAPpFIleList = []
+
+# 1. 先获取目录下的所有的APP List
+# 2. 在去解析相关的文件, 获取这个项目所有的APP List
+# 3. 取出所有的需要的APP List的路径
+# 4. 获取APP相关的信息
+# 5. 生成相关的excel表格
+
+
 
 # googleAppFilePath = "/home/xuwanjin/xuwanjin_workserver/" \
 #                     "source/6739_2/ALPS-MP-N1.MP18-V1_AUS6739_66_N1_INHOUSE/" \
@@ -147,15 +158,6 @@ def get_app_base_info(app_file_path):
         "aapt d badging %s" % app_file_path,
         'r', 1).read()
     match_app_base = re.compile(getApkInfo).match(output_base)
-    # application: label='Shadowsocks'
-    # app_package_info_str = str(output_base)
-    # print(app_package_info_str)
-    # for app_info_line in app_package_info_str.split('\n'):
-    #     if app_info_line.__contains__("application: label="):
-    #         app_info_line.split(" ")
-    #         print(app_info_line.split(" ")[1].strip('label=').lstrip("'").rstrip("'"))
-    #     # print(fileLine)
-
     if not match_app_base:
         raise Exception("can't not get package info")
     output_base_application = os.popen(
@@ -166,19 +168,32 @@ def get_app_base_info(app_file_path):
     print(match_app_base_application.group(1))
     app_name = match_app_base_application.group(1)
     package_name = match_app_base.group(1)
-    version_code = match_app_base.group(2)
     version_name = match_app_base.group(3)
     print(package_name)
-    print(version_code)
     print(version_name)
-    return package_name, version_code, version_name, app_name
+    return app_name, version_name, package_name
 
 
 # a path
 app_files = get_app_file_name_info("/home/xuwanjin/Downloads/software/")
 print(app_files)
 # for app_file in app_files:
-
+app_file_list = []
 #### Test
 for app_file in app_files:
-    get_app_base_info(app_file)
+    app_info = get_app_base_info(app_file)
+    app_file_instance = AppFile(app_info[0], app_info[1], app_info[2], "3333", str(app_file).split('/')[-1])
+    app_file_list.append(app_file_instance)
+
+# def xls_output():
+
+wbk = xlwt.Workbook()
+sheet = wbk.add_sheet("app_list", cell_overwrite_ok=True)
+app_file_attri = []
+
+for serial_no in range(len(app_file_list)):
+    app_attri_list = app_file_list[serial_no].get_all_attri()
+    print(app_attri_list)
+    for item_index in range(len(app_attri_list)):
+        sheet.write(serial_no, item_index, app_attri_list[item_index])
+wbk.save("app_list.xlsx")
