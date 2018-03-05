@@ -131,9 +131,13 @@ def is_file_exists(filepath):
 if is_file_exists(googleAppFilePath):
     googleAppFileList = os.listdir(googleAppFilePath)
     # print(sorted(googleAppFileList))
+# some application platformBuildVersionName doesn't exist
+# some  version name of application have the blank space. eg: facebookStub/facebook-stub.apk
+getApkInfo = "package: name='(\S+)' versionCode='(\d+)' versionName='(.*)' platformBuildVersionName='.*'"
 
-getApkInfo = "package: name='(\S+)' versionCode='(\d+)' versionName='(\S+)' platformBuildVersionName='\S+'"
-getApkAppNameInfo = "application: label='(\S+)' icon='(\S+)'"
+# some the application name have the blank space,
+# some the application don't have the icon info,
+getApkAppNameInfo = "application: label='(.*)' icon="
 
 files_path = []
 
@@ -158,12 +162,19 @@ def get_app_base_info(app_file_path):
         "aapt d badging %s" % app_file_path,
         'r', 1).read()
     match_app_base = re.compile(getApkInfo).match(output_base)
+    print(app_file_path)
     if not match_app_base:
         raise Exception("can't not get package info")
     output_base_application = os.popen(
         "aapt d badging %s | grep \"application: label=\"" % app_file_path,
         'r', 1).read()
+    if not output_base_application:
+        output_base_application = os.popen(
+            "aapt d badging %s | grep \"application-label:\'\"" % app_file_path,
+            'r', 1).read()
     match_app_base_application = re.compile(getApkAppNameInfo).match(output_base_application)
+    if not match_app_base_application:
+        match_app_base_application = re.compile("application-label:'(.*)'").match(output_base_application)
     app_name = match_app_base_application.group(1)
     package_name = match_app_base.group(1)
     version_name = match_app_base.group(3)
