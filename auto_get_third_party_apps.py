@@ -13,9 +13,9 @@ from app_file_class import AppFile
 # GMS
 # customer apk
 commonAppFilePath = "/home/xuwanjin/xuwanjin_workserver/source/6739_2/ALPS-MP-N1.MP18-V1_AUS6739_66_N1_INHOUSE/vendor/"
-customAppFileDir = commonAppFilePath + "/customer"
-googleAppFilePath = commonAppFilePath + "/google"
-aaptFilePath = "prebuilts/sdk/tools/linux/bin/aapt"
+customAppFileDir = commonAppFilePath + "vendor/customer"
+googleAppFilePath = commonAppFilePath + "vendor/google"
+aaptFilePath = commonAppFilePath + "prebuilts/sdk/tools/linux/bin/aapt"
 systemFile = {}
 gmsFile = "vendor/google/products/gms.mk"
 outDir = sys.argv[0]
