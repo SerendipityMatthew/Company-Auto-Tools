@@ -13,8 +13,8 @@ from app_file_class import AppFile
 # GMS
 # customer apk
 
+customAppFileDir = "/home/xuwanjin/xuwanjin_workserver/source/6739_2/ALPS-MP-N1.MP18-V1_AUS6739_66_N1_INHOUSE/vendor/customer/apps"
 aaptFilePath = "prebuilts/sdk/tools/linux/bin/aapt"
-
 systemFile = {}
 outDir = sys.argv[0]
 gmsFile = "vendor/google/products/gms.mk"
@@ -184,27 +184,33 @@ def get_app_base_info(app_file_path):
     return app_name, version_name, package_name
 
 
-# a path
-customAppFileDir = "/home/xuwanjin/xuwanjin_workserver/source/6739_2/ALPS-MP-N1.MP18-V1_AUS6739_66_N1_INHOUSE/vendor/customer/apps"
-app_files = get_app_file_name_info(customAppFileDir)
-print(app_files)
-# for app_file in app_files:
-app_file_list = []
-#### Test
-for app_file in app_files:
-    app_info = get_app_base_info(app_file)
-    app_file_instance = AppFile(app_info[0], app_info[1], app_info[2], "3333", str(app_file).split('/')[-1])
-    app_file_list.append(app_file_instance)
+def yield_app_instance():
+    # a path
+    app_files = get_app_file_name_info(customAppFileDir)
+    print(app_files)
+    # for app_file in app_files:
+    app_file_list = []
+    #### Test
+    for app_file in app_files:
+        app_info = get_app_base_info(app_file)
+        app_file_instance = AppFile(app_info[0], app_info[1], app_info[2], "3333", str(app_file).split('/')[-1])
+        app_file_list.append(app_file_instance)
 
-# def xls_output():
+    return app_file_list
 
-wbk = xlwt.Workbook()
-sheet = wbk.add_sheet("app_list", cell_overwrite_ok=True)
-app_file_attri = []
 
-for serial_no in range(len(app_file_list)):
-    app_attri_list = app_file_list[serial_no].get_all_attri()
-    print(app_attri_list)
-    for item_index in range(len(app_attri_list)):
-        sheet.write(serial_no, item_index, app_attri_list[item_index])
-wbk.save("app_list.xlsx")
+def yield_excel_file(app_file_list, excel_file_name):
+    wbk = xlwt.Workbook()
+    sheet = wbk.add_sheet("app_list", cell_overwrite_ok=True)
+
+    for serial_no in range(len(app_file_list)):
+        app_attri_list = app_file_list[serial_no].get_all_attri()
+        print(app_attri_list)
+        for item_index in range(len(app_attri_list)):
+            if item_index == 3:
+                continue
+            sheet.write(serial_no, item_index, app_attri_list[item_index])
+    wbk.save(excel_file_name + ".xlsx")
+
+
+yield_excel_file(yield_app_instance(), "app_list")
