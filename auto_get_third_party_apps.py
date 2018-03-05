@@ -12,7 +12,7 @@ from app_file_class import AppFile
 # system/operator
 # GMS
 # customer apk
-commonAppFilePath = "/home/xuwanjin/xuwanjin_workserver/source/6739_2/ALPS-MP-N1.MP18-V1_AUS6739_66_N1_INHOUSE/vendor/"
+commonAppFilePath = "/home/xuwanjin/xuwanjin_workserver/source/6739_2/ALPS-MP-N1.MP18-V1_AUS6739_66_N1_INHOUSE/"
 customAppFileDir = commonAppFilePath + "vendor/customer"
 googleAppFilePath = commonAppFilePath + "vendor/google"
 aaptFilePath = commonAppFilePath + "prebuilts/sdk/tools/linux/bin/aapt"
@@ -201,7 +201,7 @@ def yield_app_instance(custom_App_File_Dir):
 
 def yield_excel_file(app_file_list, excel_file_name):
     wbk = xlwt.Workbook()
-    sheet = wbk.add_sheet("app_list", cell_overwrite_ok=True)
+    sheet = wbk.add_sheet(excel_file_name, cell_overwrite_ok=True)
     for serial_no in range(len(app_file_list)):
         app_attri_list = app_file_list[serial_no].get_all_attri()
         print(app_attri_list)
