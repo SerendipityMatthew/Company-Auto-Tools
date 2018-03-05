@@ -163,19 +163,19 @@ def get_app_base_info(app_file_path):
     output_base_application = os.popen(
         "aapt d badging %s | grep \"application: label=\"" % app_file_path,
         'r', 1).read()
-    print(str(output_base_application).strip("\n"))
     match_app_base_application = re.compile(getApkAppNameInfo).match(output_base_application)
-    print(match_app_base_application.group(1))
     app_name = match_app_base_application.group(1)
     package_name = match_app_base.group(1)
     version_name = match_app_base.group(3)
+    print(match_app_base_application.group(1))
     print(package_name)
     print(version_name)
     return app_name, version_name, package_name
 
 
 # a path
-app_files = get_app_file_name_info("/home/xuwanjin/Downloads/software/")
+customAppFileDir = "/home/xuwanjin/xuwanjin_workserver/source/6739_2/ALPS-MP-N1.MP18-V1_AUS6739_66_N1_INHOUSE/vendor/customer/apps"
+app_files = get_app_file_name_info(customAppFileDir)
 print(app_files)
 # for app_file in app_files:
 app_file_list = []
