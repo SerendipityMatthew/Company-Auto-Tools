@@ -6,12 +6,11 @@
 # 6. make diff package
 # 7. zip file
 import commands
-from email.header import Header
-from email.mime import message
-from email.mime.text import MIMEText
-
-from enum import Enum
 import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.utils import formataddr
+from enum import Enum
 
 full_project_name = "5058I_ALAE"
 REPO_NAME = "ALPS-MP-N1.MP18-V1_AUS6739_66_N1_INHOUSE/"
@@ -27,6 +26,14 @@ build_variant = "user"
 ENG_TYPE = "eng"
 DEBUG_TYPE = "user_debug"
 USER_TYPE = "user"
+BUILD_LOG_FILE = 'build.log'
+
+sender = '3209534840@qq.com'
+password = 'itjxybikiywtdgch'
+user = '3209534840@qq.com'
+
+
+
 # project=
 # BUILD_VARIANT =  user(default)
 BUILD_TYPE = Enum(ENG_TYPE, DEBUG_TYPE, USER_TYPE)
@@ -65,8 +72,20 @@ commands.getstatusoutput("cd %s && lunch %s-%s" % (REPO_NAME, platform_name, bui
 build_status, build_result = commands.getstatusoutput("cd %s && make -j8 %s" % (REPO_NAME, module_name))
 print "command exec status = %s, result %s " % (build_status, build_result)
 
-email_receivers = ["3209534840@qq.com"]
-MIMEText("compile error", 'plain', 'utf-8')
-message['from'] = Header("xxx", 'utf-8')
-message['to'] = Header("YYY", 'utf-8')
-subject =
+
+def mail():
+    compiling_report_message = MIMEMultipart()
+    compiling_report_message['From'] = formataddr(["Compiling result Report ", sender])
+    compiling_report_message['To'] = formataddr(["FK", user])
+    compiling_report_message['Subject'] = "Compiling Report"
+    compiling_report_message.attach(MIMEText('Compiling report', 'plain', 'utf-8'))
+    compiling_log_attach = MIMEText(open(BUILD_LOG_FILE, 'rb').read(), 'base64', 'utf-8')
+    compiling_log_attach['Content-Type'] = 'application/txt'
+    compiling_log_attach["Content-Disposition"] = 'attachment; filename="%s"' % BUILD_LOG_FILE
+    compiling_report_message.attach(compiling_log_attach)
+    server = smtplib.SMTP_SSL("smtp.qq.com", 465)
+    server.login(sender, password)
+    server.sendmail(sender, [user, ], compiling_report_message.as_string())
+    server.quit()
+
+ret = mail()
