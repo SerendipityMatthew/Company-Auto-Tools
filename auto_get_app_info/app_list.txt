@@ -1,0 +1,97 @@
+Claro | 10.7.1 | com.claroColombia.contenedor | 3333 | ClaroV1071F101017VC1018PRE.apk
+MobileAssist | 3.2.8 | com.yagna.mobileassist | 3333 | MobileAssist_v3.2.8_apkpure.com.apk
+Single Login | 2.3.3 | com.tcl.sso.accountservice | 3333 | SingleLogin_V2.3.3_20180108_103747_release_signed_common.apk
+Facebook Services | 27.2.0 | com.facebook.services | 3333 | facebook-services.apk
+Napster | 5.3.1.347 | com.rhapsody.napster | 3333 | Napster_com.rhapsody.napster.apk
+Dragon Mania | 1.0.2 | com.gameloft.android.GloftPDMF | 3333 | DragonMania_FULL_Alcatel_2017Generic_1655_67947_102_OR80.apk
+Browser | v3.0.1.13 | com.hawk.android.browser | 3333 | Browser_v3.0.1.13_release_for_pr.apk
+Gboard | 6.7.18.176627673-release-arm64-v8a | com.google.android.inputmethod.latin | 3333 | GoogleLatinInput-arm64-v8a_signed-arm64-v8a-google_keyboard_20171011_jammer_RC18.apk
+Apps | 5.4.0.912 | com.tcl.live | 3333 | Apps_V5.4.0.912_20180108_112353_release_alcatel.apk
+MyALIV | 1.0.1 | org.app.myaliv | 3333 | aliv1_1.apk
+Camera | v8.1.4.1.0012.1 | com.mediatek.hz.camera | 3333 | Camera_v8.1.4.1.0012.1_for_A3PLUS.apk
+Alcatel AppCloud | 3.2.1 | com.ironsource.appcloud.oobe.alcatel | 3333 | appcloud_oobe_alcatel-release_V3.2.1.apk
+Mi Claro | 3.6.5 | com.claroecuador.miclaro | 3333 | MiClaroEcuador-V3.6.5.apk
+Facebook App Installer | 25.0.1 | com.facebook.system | 3333 | installer.apk
+Claro música | 7.8.21 | com.telcel.imk | 3333 | Claromusica_20180123_MEXICO_v7_8_21_b837.apk
+Facebook | 147.0.0.44.75 | com.facebook.katana | 3333 | Facebook_com.facebook.katana.apk
+Club Movistar | 10.0.3 | cl.jbravo.ams | 3333 | Club_Movistar_cl.jbravo.ams.apk
+TouchPal Handwrite Pack | 5.7.0.8 | com.cootek.smartinputv5.language.oem.chs.handwrite | 3333 | HandwritePack.apk
+Modo Fútbol | 2.0.8 | com.smartboxtv.copamovistarchile | 3333 | Modo_Futbol_com.smartboxtv.copamovistarchile.apk
+Feedback | v7.2.0.0.0006.0 | com.tct.endusertest | 3333 | OneTouchFeedback_Global_v7.2.0.0.0006.0_signed_platformkey_alldpi.apk
+TouchPal Pinyin/Bihua Pack | 5.7.0.8 | com.cootek.smartinputv5.language.oem.chs | 3333 | PinyinPack.apk
+Mi Claro | 1.0.1 | com.clarocolombia.miclaro | 3333 | MiClaro.apk
+Tienda Prepago Movistar | 1.1 | com.skyg4mb.tiendaprepagomovistar | 3333 | app-release.apk
+Start | 4.7.2.1.3.100 | com.celltick.lockscreen | 3333 | Start-Prod-AMX_Telcel_B1System-Silent-release.apk
+Weather | v7.0.2.2.0469.0_00_1228 | com.tct.weather | 3333 | Weather_Global_v7.0.2.2.0469.0_signed_releasekey_alldpi.apk
+Facebook | stub (27.2.0) | com.facebook.katana | 3333 | facebook-stub.apk
+MemoryTest | 1.0 | com.jrdcom.memorytest | 3333 | Memory_Test.apk
+WhatsApp | 2.17.422 | com.whatsapp | 3333 | WhatsApp.apk
+WhatsApp | 2.11.1 | com.whatsapp | 3333 | WhatsAppDownloader.apk
+Facebook | 148.0.0.51.62 | com.facebook.katana | 3333 | Facebook_com.facebook.katana.apk
+enjoy.now | 2.2.1.1 | com.alcatel.mcrm | 3333 | enjoy.now_live_preinstall-2.2.1.1.apk
+Instagram | 22.0.0.17.68 | com.instagram.android | 3333 | Instagram_com.instagram.android.apk
+Mi Telcel | 7.1 | com.speedymovil.wire | 3333 | MTV71D171124VC339-MiTelcel71MERGE-prodRelease.apk
+Activate | 2.2.05 | com.android.tbks | 3333 | Activateapk_V2.2.05_20171126_153144_GLOBAL_Release.apk
+Regulatory & safety | v7.0.1.0181.0_00_0228 | com.jrdcom.Elabel | 3333 | Elabel_GL_v7.0.1.0181.0_signed_platformkey_alldpi.apk
+TouchPal Wubi Pack | 5.7.0.8 | com.cootek.smartinputv5.language.oem.wubi | 3333 | WubiPack.apk
+Transfer | 3.1.0.96 | com.citi.transfer | 3333 | Transfer.apk
+TouchPal Englishgb Pack | 5.7.0.8 | com.cootek.smartinputv5.language.oem.englishgb | 3333 | EnglishgbPack.apk
+Messenger | 142.0.0.18.63 | com.facebook.orca | 3333 | Messenger_com.facebook.orca.apk
+STUDIO+ | 1.0.26(83) | com.watchever.studioplus | 3333 | STUDIO_com.watchever.studioplus.apk
+Kingdoms | 1.0.2 | com.gameloft.android.GloftDMKF | 3333 | DisneyMagicKingdomFreemiumMobile_FULL_Alcatel_2017_Generic_2033_67949_102_OR81.apk
+Entel | 2.1.4 | cl.entel.appswlsdesa | 3333 | Entel_Chile_2140.apk
+Browser | v3.0.1.13 | com.hawk.android.browser | 3333 | Browser_v3.0.1.13_release_for_pr.apk
+CNT Play | 2.3.1 | com.cnt.cntplay | 3333 | CNT_Play_com.cnt.cntplay.apk
+WhatsApp | 2.17.144 | com.whatsapp | 3333 | WhatsApp_com.whatsapp.apk
+Yandex | 7.21 | ru.yandex.searchplugin | 3333 | Yandex.apk
+Messenger | stub (27.2.0) | com.facebook.orca | 3333 | messenger-stub.apk
+100% Games! | 2.0.1 | com.gameloft.android.gdc | 3333 | 100_juegos_com.gameloft.android.gdc.apk
+TouchPal 2017 | 6.2.6.7 | com.emoji.keyboard.touchpal | 3333 | TouchPal.apk
+WhatsApp | 2.11.1 | com.whatsapp | 3333 | WhatsAppDownloader.apk
+Twitter | 7.13.0 | com.twitter.android | 3333 | twitter-7.13.0-release-20170918-64bit.apk
+Activate | 2.2.05 | com.android.tbks | 3333 | Activateapk_V2.2.05_20171126_153144_LATAM_Release.apk
+Messenger | stub (25.0.1) | com.facebook.orca | 3333 | messenger-stub.apk
+Super Cleaner | 1.9.6 | com.apps.go.clean.boost.master | 3333 | Module_SuperCleaner_1.9.6.115255_mibcPreload.apk
+Facebook App Manager | 25.0.1 | com.facebook.appmanager | 3333 | appmanager.apk
+Facebook App Manager | 27.2.0 | com.facebook.appmanager | 3333 | appmanager.apk
+Claro video | 404v2 | com.dla.android | 3333 | ClaroVideo_404v2.apk
+Compass | v8.0.1.8.0102.0 | com.jrdcom.compass | 3333 | Compass_Global_v8.0.1.8.0102.0_signed_releasekey_alldpi.apk
+Claro apps | 2.3.6.2 | com.naranya.claroapps | 3333 | CLAROAPPS_OEM_2_3_6_2.apk
+REVGO Play | 1.9.51-163741 | com.cablebahamas.revgoplay | 3333 | REVGO_Play_v1.9.51_163741_apkpure.com.apk
+Selección | 6.1.0 | com.Wise.SeleccionColombiaOficial | 3333 | Seleccion.apk
+Diagnostics | v1.0.0.0.0157.0_0424 | com.tct.diagnostics | 3333 | Diagnostics_Global_v1.0.0.0.0157.0_signed_platformkey_alldpi.apk
+Mi Claro | 1.1.0 | com.clarocolombia.miclaro | 3333 | MiClaro.apk
+Super Cleaner | 1.9.6 | com.apps.go.clean.boost.master | 3333 | Module_SuperCleaner_1.9.6.115255_mibcPreload.apk
+Joy Launcher | v7.0.8.1.0707.5_00_0227 | com.tct.launcher | 3333 | Launcher_Global_v7.0.8.1.0707.5_signed_platformkey_alldpi.apk
+Claro juegos | 3.2.2 | com.gameloft.android.gdc | 3333 | AYCE_PF61_preloads_s2009_4x4_v322.apk
+Mi Movistar | 5.2.3 | cl.movistar.android | 3333 | Mi_Movistar_cl.movistar.android.apk
+Files | v7.0.7.1.0526.0_00_1221 | com.jrdcom.filemanager | 3333 | FileManager_Global_v7.0.7.1.0526.0_signed_platformkey_alldpi.apk
+Gallery | v8.0.0.0.0710.0 | com.tcl.gallery | 3333 | GalleryN_Confused_Version_Global_v8.0.0.0.0710.0_signed_platformkey_alldpi.apk
+CNT Movil | 2.0 | ec.gob.cnt.apps.plus | 3333 | CNT_Movil_ec.gob.cnt.apps.plus.apk
+TouchPal Bopomofo Pack | 5.7.0.8 | com.cootek.smartinputv5.language.oem.cht | 3333 | ChtPack.apk
+Domicilios | 3.1.9 | com.clickdelivery.android.domiciliosbogota | 3333 | domicilios342.apk
+Movistar Play | v4.2.0 20170313T110145 | cl.movistarplay | 3333 | Movistar_Play_cl.movistarplay.apk
+Facebook | stub (25.0.1) | com.facebook.katana | 3333 | facebook-stub.apk
+100% Games! | 2.0.9 | com.gameloft.android.gdc | 3333 | 100Game_MOVISTAR_4x3_KU84_2009_2.0.9.apk
+Theme Center | 1.1.41.r | com.tcl.hawk.ts | 3333 | ThemeStore_V1.1.41.r_20170830_newname.apk
+enjoy.now | 2.2.1.1 | com.alcatel.mcrm | 3333 | enjoy.now_live_preinstall-2.2.1.1.apk
+Candy Selfie Camera | 1.0.0 | com.selfiecamera.sweet.selfie.camera | 3333 | CandySelfieCamera_1.0.0_201711230818_preload_A3ARelease_540.apk
+Facebook Services | 25.0.1 | com.facebook.services | 3333 | facebook-services.apk
+Setup Wizard | v7.0.7.1.0536.0_00_0129 | com.tct.setupwizard | 3333 | SetupWizard_Global_v7.0.7.1.0536.0_signed_platformkey_alldpi.apk
+Little Big City 2 | 1.0.3 | com.gameloft.android.GloftMBCF | 3333 | LittleBigCity2_FULL_Alcatel_2017Generic_2063_68131_103_OS21.apk
+com.system.toolkit | 1.0 | com.system.toolkit | 3333 | toolkit-release.apk
+Modern Combat 4 Zero Hour | 1.0.0 | com.gameloft.android.GloftMC4M | 3333 | ModernCombat4_SMS_Alcatel_5058_IGP_LATAM_ML_100_TS16.apk
+Updates | v7.0.10.3.0639.0_00_0121 | com.tcl.ota | 3333 | Fota_Global_v7.0.10.3.0639.0_signed_platformkey_alldpi.apk
+OfficeSuite | 9.1.10758 | com.mobisystems.office | 3333 | OfficeSuite_Free_9.1.10758.apk
+Kingdoms | 1.0.0 | com.gameloft.android.GloftDMKF | 3333 | DisneyMagicKingdomFreemiumMobile_FULL_Alcatel_5058_LATAM_2033_71365_100_OW80.apk
+Motocross: Trial Extreme | 1.0.1 | com.gameloft.android.GloftMOTR | 3333 | MotocrossTrialExtreme_SMS_Alcatel_5058_IGP_LATAM_ML_101_TS17.apk
+Joy Lockscreen | 1.9.18 | com.tcl.joylockscreen | 3333 | LScreen.apk
+Facebook App Installer | 27.2.0 | com.facebook.system | 3333 | installer.apk
+Claro ideas | 5.0 | com.portal | 3333 | Claroideas_V5.0_20160822_signed_platformkey_alldpi.apk
+Support Centre | v7.0.1.2.0176.0 | com.tcl.usercare | 3333 | UserCare_GL_v7.0.1.2.0176.0_signed_platformkey_alldpi.apk
+Spider-Man: Ultimate Power | 1.0.4 | com.gameloft.android.GloftSMIF | 3333 | SpiderManUltimatePower_FULL_Alcatel_2017_Generic_1764_67951_104_OR82.apk
+Spider-Man: Ultimate Power | 1.0.0 | com.gameloft.android.GloftSMIF | 3333 | SpiderManUltimatePower_FULL_Alcatel_5058_1764_71369_100_OW82_LATAM.apk
+Telcel | 11.1.2 | com.telcel.contenedor | 3333 | TelcelV1112F04122017VC1027_PRE.apk
+Puzzle Pets | 1.0.0 | com.gameloft.android.GloftDBMF | 3333 | PuzzlePets_FULL_5058_1739_71367_100_OW81.apk
+Simple Launcher | v8.2.1.0.0029.0 | com.tct.simplelauncher | 3333 | SimpleLauncher_Global_v8.2.1.0.0029.0_signed_platformkey_alldpi.apk
+Nova | 1.3.4.0001 | com.Mainews.news | 3333 | Nova_v1.3.4.0001_20171227_163314_release_for_preloaded.apk

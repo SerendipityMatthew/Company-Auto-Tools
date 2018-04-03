@@ -1,0 +1,244 @@
+Market Feedback Agent | 7.1.1-3515457 | com.google.android.feedback | 3333 | GoogleFeedback.apk
+ConfigUpdater | 7.1.1-3515457 | com.google.android.configupdater | 3333 | ConfigUpdater.apk
+Photos | 3.8.0.173617484 | com.google.android.apps.photos | 3333 | Photos_x86_xhdpi.apk
+Photos | 3.8.0.173617484 | com.google.android.apps.photos | 3333 | Photos_x86.apk
+Photos | 3.8.0.173617484 | com.google.android.apps.photos | 3333 | Photos_x86_mdpi.apk
+Photos | 3.8.0.173617484 | com.google.android.apps.photos | 3333 | Photos_arm_hdpi.apk
+Photos | 3.8.0.173617484 | com.google.android.apps.photos | 3333 | Photos_x86_hdpi.apk
+Photos | 3.8.0.173617484 | com.google.android.apps.photos | 3333 | Photos_arm_xxxhdpi.apk
+Photos | 3.8.0.173617484 | com.google.android.apps.photos | 3333 | Photos_arm64_mdpi.apk
+Photos | 3.8.0.173617484 | com.google.android.apps.photos | 3333 | Photos_arm64_xxhdpi.apk
+Photos | 3.8.0.173617484 | com.google.android.apps.photos | 3333 | Photos_arm_xhdpi.apk
+Photos | 3.8.0.173617484 | com.google.android.apps.photos | 3333 | Photos_x86_xxxhdpi.apk
+Photos | 3.8.0.173617484 | com.google.android.apps.photos | 3333 | Photos_arm_xxhdpi.apk
+Photos | 3.8.0.173617484 | com.google.android.apps.photos | 3333 | Photos_arm64_xhdpi.apk
+Photos | 3.8.0.173617484 | com.google.android.apps.photos | 3333 | Photos_arm64_hdpi.apk
+Photos | 3.8.0.173617484 | com.google.android.apps.photos | 3333 | Photos_arm64.apk
+Photos | 3.8.0.173617484 | com.google.android.apps.photos | 3333 | Photos_arm.apk
+Photos | 3.8.0.173617484 | com.google.android.apps.photos | 3333 | Photos_x86_xxhdpi.apk
+Photos | 3.8.0.173617484 | com.google.android.apps.photos | 3333 | Photos_arm_mdpi.apk
+Photos | 3.8.0.173617484 | com.google.android.apps.photos | 3333 | Photos_arm64_xxxhdpi.apk
+Google Text-to-speech Engine | 3.13.3 | com.google.android.tts | 3333 | GoogleTTS_x86.apk
+Google Text-to-speech Engine | 3.13.3 | com.google.android.tts | 3333 | GoogleTTS_arm.apk
+Google One Time Init | 7.1.1-3515457 | com.google.android.onetimeinitializer | 3333 | GoogleOneTimeInitializer.apk
+Google Play Music | 8.0.6322-1.W | com.google.android.music | 3333 | Music2.apk
+Google Services Framework | 7.1.1-3515457 | com.google.android.gsf | 3333 | GoogleServicesFramework_device.apk
+Google Services Framework | 7.1.1-3515457 | com.google.android.gsf | 3333 | GoogleServicesFramework_default.apk
+Google Services Framework | 7.1.1-3515457 | com.google.android.gsf | 3333 | GoogleServicesFramework_tablet.apk
+Android Shared Library | 1 | com.google.android.ext.shared | 3333 | GoogleExtShared.apk
+Carrier Services | 6.0.175105600 | com.google.android.ims | 3333 | CarrierServices_x86.apk
+Carrier Services | 6.0.175105600 | com.google.android.ims | 3333 | CarrierServices_arm64.apk
+Carrier Services | 6.0.175105600 | com.google.android.ims | 3333 | CarrierServices_arm.apk
+Calendar | 5.8.4-174035806-release | com.google.android.calendar | 3333 | CalendarGoogle.apk
+Google Calendar Sync | 5.2.3-99827563-release | com.google.android.syncadapters.calendar | 3333 | GoogleCalendarSyncAdapter.apk
+Google Backup Transport | 7.1.1-3515457 | com.google.android.backuptransport | 3333 | GoogleBackupTransport.apk
+Android Services Library | 1 | com.google.android.ext.services | 3333 | GoogleExtServices.apk
+Google Japanese Input | 2.18.2569.3.124334694-armeabi-v7a | com.google.android.inputmethod.japanese | 3333 | JapaneseIME_arm.apk
+Google Japanese Input | 2.18.2569.3.124334694-x86_64 | com.google.android.inputmethod.japanese | 3333 | JapaneseIME_x86_64.apk
+Google Japanese Input | 2.18.2569.3.124334694-arm64-v8a | com.google.android.inputmethod.japanese | 3333 | JapaneseIME_arm64.apk
+Google Japanese Input | 2.18.2569.3.124334694-x86 | com.google.android.inputmethod.japanese | 3333 | JapaneseIME_x86.apk
+Google Pinyin Input | 4.3.0.125756775-preload-x86 | com.google.android.inputmethod.pinyin | 3333 | GooglePinyinIME_x86.apk
+Google Pinyin Input | 4.3.0.125756775-preload-armeabi-v7a | com.google.android.inputmethod.pinyin | 3333 | GooglePinyinIME_arm.apk
+Google Pinyin Input | 4.3.0.125756775-preload-arm64-v8a | com.google.android.inputmethod.pinyin | 3333 | GooglePinyinIME_arm64.apk
+Google Pinyin Input | 4.3.0.125756775-preload-x86_64 | com.google.android.inputmethod.pinyin | 3333 | GooglePinyinIME_x86_64.apk
+Google Play Store | 8.3.73.U-all [0] [FP] 173262113 | com.android.vending | 3333 | Phonesky_arm.apk
+Google Play Store | 8.3.74.U-all [0] [PR] 173689560 | com.android.vending | 3333 | Phonesky_classic.apk
+Chrome | 62.0.3202.84 | com.android.chrome | 3333 | Chrome_x86_64.apk
+Chrome | 62.0.3202.84 | com.android.chrome | 3333 | Chrome_arm64.apk
+Chrome | 62.0.3202.84 | com.android.chrome | 3333 | Chrome_x86.apk
+Chrome | 62.0.3202.84 | com.android.chrome | 3333 | Chrome_arm.apk
+Google Korean Input | 1.5.0.125756861-preload-arm64-v8a | com.google.android.inputmethod.korean | 3333 | KoreanIME_arm64.apk
+Google Korean Input | 1.5.0.125756861-preload-x86_64 | com.google.android.inputmethod.korean | 3333 | KoreanIME_x86_64.apk
+Google Korean Input | 1.5.0.125756861-preload-armeabi-v7a | com.google.android.inputmethod.korean | 3333 | KoreanIME_arm.apk
+Google Korean Input | 1.5.0.125756861-preload-x86 | com.google.android.inputmethod.korean | 3333 | KoreanIME_x86.apk
+Print Service Recommendation Service | 1.0.0 | com.google.android.printservice.recommendation | 3333 | GooglePrintRecommendationService.apk
+Contacts | 2.2.3.170208164 | com.google.android.contacts | 3333 | GoogleContacts_xxhdpi.apk
+Contacts | 2.2.3.170208164 | com.google.android.contacts | 3333 | GoogleContacts_xxxhdpi.apk
+Contacts | 2.2.3.170208164 | com.google.android.contacts | 3333 | GoogleContacts_mdpi.apk
+Contacts | 2.2.3.170208164 | com.google.android.contacts | 3333 | GoogleContacts_hdpi.apk
+Contacts | 2.2.3.170208164 | com.google.android.contacts | 3333 | GoogleContacts.apk
+Contacts | 2.2.3.170208164 | com.google.android.contacts | 3333 | GoogleContacts_xhdpi.apk
+Tags | 1.1 | com.google.android.tag | 3333 | TagGoogle.apk
+Drive | 2.7.412.12.86 | com.google.android.apps.docs | 3333 | Drive_x86_64_xxxhdpi.apk
+Drive | 2.7.412.12.74 | com.google.android.apps.docs | 3333 | Drive_x86_xhdpi.apk
+Drive | 2.7.412.12.85 | com.google.android.apps.docs | 3333 | Drive_x86_64_xxhdpi.apk
+Drive | 2.7.412.12.44 | com.google.android.apps.docs | 3333 | Drive_arm64_xhdpi.apk
+Drive | 2.7.412.12.76 | com.google.android.apps.docs | 3333 | Drive_x86_xxxhdpi.apk
+Drive | 2.7.412.12.82 | com.google.android.apps.docs | 3333 | Drive_x86_64_mdpi.apk
+Drive | 2.7.412.12.84 | com.google.android.apps.docs | 3333 | Drive_x86_64_xhdpi.apk
+Drive | 2.7.412.12.42 | com.google.android.apps.docs | 3333 | Drive_arm64_mdpi.apk
+Drive | 2.7.412.12.35 | com.google.android.apps.docs | 3333 | Drive_arm_xxhdpi.apk
+Drive | 2.7.412.12.32 | com.google.android.apps.docs | 3333 | Drive_arm_mdpi.apk
+Drive | 2.7.412.12.83 | com.google.android.apps.docs | 3333 | Drive_x86_64_hdpi.apk
+Drive | 2.7.412.12.30 | com.google.android.apps.docs | 3333 | Drive_arm.apk
+Drive | 2.7.412.12.72 | com.google.android.apps.docs | 3333 | Drive_x86_mdpi.apk
+Drive | 2.7.412.12.36 | com.google.android.apps.docs | 3333 | Drive_arm_xxxhdpi.apk
+Drive | 2.7.412.12.45 | com.google.android.apps.docs | 3333 | Drive_arm64_xxhdpi.apk
+Drive | 2.7.412.12.73 | com.google.android.apps.docs | 3333 | Drive_x86_hdpi.apk
+Drive | 2.7.412.12.43 | com.google.android.apps.docs | 3333 | Drive_arm64_hdpi.apk
+Drive | 2.7.412.12.75 | com.google.android.apps.docs | 3333 | Drive_x86_xxhdpi.apk
+Drive | 2.7.412.12.33 | com.google.android.apps.docs | 3333 | Drive_arm_hdpi.apk
+Drive | 2.7.412.12.40 | com.google.android.apps.docs | 3333 | Drive_arm64.apk
+Drive | 2.7.412.12.80 | com.google.android.apps.docs | 3333 | Drive_x86_64.apk
+Drive | 2.7.412.12.34 | com.google.android.apps.docs | 3333 | Drive_arm_xhdpi.apk
+Drive | 2.7.412.12.70 | com.google.android.apps.docs | 3333 | Drive_x86.apk
+Drive | 2.7.412.12.46 | com.google.android.apps.docs | 3333 | Drive_arm64_xxxhdpi.apk
+Hangouts | 21.0.162426697 | com.google.android.talk | 3333 | Hangouts_arm_xxhdpi.apk
+Hangouts | 21.0.162426697 | com.google.android.talk | 3333 | Hangouts_x86_hdpi.apk
+Hangouts | 21.0.162426697 | com.google.android.talk | 3333 | Hangouts_x86_xxhdpi.apk
+Hangouts | 21.0.162426697 | com.google.android.talk | 3333 | Hangouts_arm64_xhdpi.apk
+Hangouts | 21.0.162426697 | com.google.android.talk | 3333 | Hangouts_arm_mdpi.apk
+Hangouts | 21.0.162426697 | com.google.android.talk | 3333 | Hangouts_x86.apk
+Hangouts | 21.0.162426697 | com.google.android.talk | 3333 | Hangouts_x86_mdpi.apk
+Hangouts | 21.0.162426697 | com.google.android.talk | 3333 | Hangouts_arm.apk
+Hangouts | 21.0.162426697 | com.google.android.talk | 3333 | Hangouts_arm64_xxxhdpi.apk
+Hangouts | 21.0.162426697 | com.google.android.talk | 3333 | Hangouts_arm_hdpi.apk
+Hangouts | 21.0.162426697 | com.google.android.talk | 3333 | Hangouts_arm64.apk
+Hangouts | 21.0.162426697 | com.google.android.talk | 3333 | Hangouts_arm64_mdpi.apk
+Hangouts | 21.0.162426697 | com.google.android.talk | 3333 | Hangouts_x86_xxxhdpi.apk
+Hangouts | 21.0.162426697 | com.google.android.talk | 3333 | Hangouts_arm_xhdpi.apk
+Hangouts | 21.0.162426697 | com.google.android.talk | 3333 | Hangouts_arm64_xxhdpi.apk
+Hangouts | 21.0.162426697 | com.google.android.talk | 3333 | Hangouts_x86_xhdpi.apk
+Hangouts | 21.0.162426697 | com.google.android.talk | 3333 | Hangouts_arm64_hdpi.apk
+Hangouts | 21.0.162426697 | com.google.android.talk | 3333 | Hangouts_arm_xxxhdpi.apk
+Maps | 9.47.3 | com.google.android.apps.maps | 3333 | Maps_x86.apk
+Maps | 9.47.3 | com.google.android.apps.maps | 3333 | Maps_x86_64_mdpi.apk
+Maps | 9.47.3 | com.google.android.apps.maps | 3333 | Maps_x86_xhdpi.apk
+Maps | 9.47.3 | com.google.android.apps.maps | 3333 | Maps_x86_hdpi.apk
+Maps | 9.47.3 | com.google.android.apps.maps | 3333 | Maps_arm.apk
+Maps | 9.47.3 | com.google.android.apps.maps | 3333 | Maps_arm_xhdpi.apk
+Maps | 9.47.3 | com.google.android.apps.maps | 3333 | Maps_arm64_mdpi.apk
+Maps | 9.47.3 | com.google.android.apps.maps | 3333 | Maps_x86_mdpi.apk
+Maps | 9.47.3 | com.google.android.apps.maps | 3333 | Maps_x86_64.apk
+Maps | 9.47.3 | com.google.android.apps.maps | 3333 | Maps_arm64_hdpi.apk
+Maps | 9.47.3 | com.google.android.apps.maps | 3333 | Maps_arm64_xhdpi.apk
+Maps | 9.47.3 | com.google.android.apps.maps | 3333 | Maps_x86_64_xhdpi.apk
+Maps | 9.47.3 | com.google.android.apps.maps | 3333 | Maps_arm_mdpi.apk
+Maps | 9.47.3 | com.google.android.apps.maps | 3333 | Maps_arm64.apk
+Maps | 9.47.3 | com.google.android.apps.maps | 3333 | Maps_arm_hdpi.apk
+Maps | 9.47.3 | com.google.android.apps.maps | 3333 | Maps_x86_64_hdpi.apk
+Messages | 2.5.212 (Piccolo_RC25_hdpi.x86.phone) | com.google.android.apps.messaging | 3333 | Messages_x86_hdpi.apk
+Messages | 2.5.212 (Piccolo_RC25_xhdpi.armeabi-v7a.phone) | com.google.android.apps.messaging | 3333 | Messages_arm_xhdpi.apk
+Messages | 2.5.212 (Piccolo_RC25_xxhdpi.armeabi-v7a.phone) | com.google.android.apps.messaging | 3333 | Messages_arm_xxhdpi.apk
+Messages | 2.5.212 (Piccolo_RC25_mdpi.x86.phone) | com.google.android.apps.messaging | 3333 | Messages_x86_mdpi.apk
+Messages | 2.5.212 (Piccolo_RC25_xxxhdpi.arm64-v8a.phone) | com.google.android.apps.messaging | 3333 | Messages_arm64_xxxhdpi.apk
+Messages | 2.5.212 (Piccolo_RC25_hdpi.armeabi-v7a.phone) | com.google.android.apps.messaging | 3333 | Messages_arm_hdpi.apk
+Messages | 2.5.212 (Piccolo_RC25_mdpi.arm64-v8a.phone) | com.google.android.apps.messaging | 3333 | Messages_arm64_mdpi.apk
+Messages | 2.5.212 (Piccolo_RC25_alldpi.arm64-v8a.phone) | com.google.android.apps.messaging | 3333 | Messages_arm64.apk
+Messages | 2.5.212 (Piccolo_RC25_xxxhdpi.armeabi-v7a.phone) | com.google.android.apps.messaging | 3333 | Messages_arm_xxxhdpi.apk
+Messages | 2.5.212 (Piccolo_RC25_xhdpi.x86.phone) | com.google.android.apps.messaging | 3333 | Messages_x86_xhdpi.apk
+Messages | 2.5.212 (Piccolo_RC25_mdpi.armeabi-v7a.phone) | com.google.android.apps.messaging | 3333 | Messages_arm_mdpi.apk
+Messages | 2.5.212 (Piccolo_RC25_alldpi.armeabi-v7a.phone) | com.google.android.apps.messaging | 3333 | Messages_arm.apk
+Messages | 2.5.212 (Piccolo_RC25_hdpi.arm64-v8a.phone) | com.google.android.apps.messaging | 3333 | Messages_arm64_hdpi.apk
+Messages | 2.5.212 (Piccolo_RC25_xxhdpi.arm64-v8a.phone) | com.google.android.apps.messaging | 3333 | Messages_arm64_xxhdpi.apk
+Messages | 2.5.212 (Piccolo_RC25_xxhdpi.x86.phone) | com.google.android.apps.messaging | 3333 | Messages_x86_xxhdpi.apk
+Messages | 2.5.212 (Piccolo_RC25_xxxhdpi.x86.phone) | com.google.android.apps.messaging | 3333 | Messages_x86_xxxhdpi.apk
+Messages | 2.5.212 (Piccolo_RC25_xhdpi.arm64-v8a.phone) | com.google.android.apps.messaging | 3333 | Messages_arm64_xhdpi.apk
+Messages | 2.5.212 (Piccolo_RC25_alldpi.x86.phone) | com.google.android.apps.messaging | 3333 | Messages_x86.apk
+Google | 7.14.21.21.x86 | com.google.android.googlequicksearchbox | 3333 | Velvet_x86.apk
+Google | 7.14.21.21.arm64 | com.google.android.googlequicksearchbox | 3333 | Velvet_arm64.apk
+Google | 7.14.21.21.arm | com.google.android.googlequicksearchbox | 3333 | Velvet_arm_xhdpi.apk
+Google | 7.14.21.21.arm | com.google.android.googlequicksearchbox | 3333 | Velvet_arm_hdpi.apk
+Google | 7.14.21.21.arm | com.google.android.googlequicksearchbox | 3333 | Velvet_arm_mdpi.apk
+Google | 7.14.21.21.arm | com.google.android.googlequicksearchbox | 3333 | Velvet_arm.apk
+Google Contacts Sync | 7.1.1-3910769 | com.google.android.syncadapters.contacts | 3333 | GoogleContactsSyncAdapter.apk
+Setup Wizard | 225.4393173 | com.google.android.setupwizard | 3333 | SetupWizard_tablet.apk
+Setup Wizard | 225.4393173 | com.google.android.setupwizard | 3333 | SetupWizard_default.apk
+Setup Wizard | 225.4393173 | com.google.android.setupwizard | 3333 | SetupWizard_device.apk
+Package installer | 7.1.1-4377943 | com.google.android.packageinstaller | 3333 | GooglePackageInstaller.apk
+Google Partner Setup | 7.1.1-4158906 | com.google.android.partnersetup | 3333 | GooglePartnerSetup.apk
+Google Play services | 11.7.46 (440-175121617) | com.google.android.gms | 3333 | GmsCore_arm64.apk
+Google Play services | 11.7.46 (446-175121617) | com.google.android.gms | 3333 | GmsCore_arm64_xhdpi.apk
+Google Play services | 11.7.46 (448-175121617) | com.google.android.gms | 3333 | GmsCore_arm64_xxhdpi.apk
+Google Play services | 11.7.46 (470-175121617) | com.google.android.gms | 3333 | GmsCore_x86.apk
+Google Play services | 11.7.46 (430-175121617) | com.google.android.gms | 3333 | GmsCore_arm.apk
+Google Play services | 11.7.46 (438-175121617) | com.google.android.gms | 3333 | GmsCore_arm_xxhdpi.apk
+Google Play services | 11.7.46 (480-175121617) | com.google.android.gms | 3333 | GmsCore_x86_64.apk
+Google Play services | 11.7.46 (434-175121617) | com.google.android.gms | 3333 | GmsCore_arm_hdpi.apk
+Google Play services | 11.7.46 (436-175121617) | com.google.android.gms | 3333 | GmsCore_arm_xhdpi.apk
+YouTube | 12.43.52 | com.google.android.youtube | 3333 | YouTube_x86_64_hdpi.apk
+YouTube | 12.43.52 | com.google.android.youtube | 3333 | YouTube_arm_xxhdpi.apk
+YouTube | 12.43.52 | com.google.android.youtube | 3333 | YouTube_x86.apk
+YouTube | 12.43.52 | com.google.android.youtube | 3333 | YouTube_x86_64_xhdpi.apk
+YouTube | 12.43.52 | com.google.android.youtube | 3333 | YouTube_arm64_mdpi.apk
+YouTube | 12.43.52 | com.google.android.youtube | 3333 | YouTube_arm_mdpi.apk
+YouTube | 12.43.52 | com.google.android.youtube | 3333 | YouTube_arm.apk
+YouTube | 12.43.52 | com.google.android.youtube | 3333 | YouTube_x86_64_mdpi.apk
+YouTube | 12.43.52 | com.google.android.youtube | 3333 | YouTube_x86_64_xxhdpi.apk
+YouTube | 12.43.52 | com.google.android.youtube | 3333 | YouTube_arm_xhdpi.apk
+YouTube | 12.43.52 | com.google.android.youtube | 3333 | YouTube_x86_64.apk
+YouTube | 12.43.52 | com.google.android.youtube | 3333 | YouTube_x86_xxhdpi.apk
+YouTube | 12.43.52 | com.google.android.youtube | 3333 | YouTube_arm64_xxhdpi.apk
+YouTube | 12.43.52 | com.google.android.youtube | 3333 | YouTube_arm64_hdpi.apk
+YouTube | 12.43.52 | com.google.android.youtube | 3333 | YouTube_x86_xhdpi.apk
+YouTube | 12.43.52 | com.google.android.youtube | 3333 | YouTube_arm64_xhdpi.apk
+YouTube | 12.43.52 | com.google.android.youtube | 3333 | YouTube_x86_mdpi.apk
+YouTube | 12.43.52 | com.google.android.youtube | 3333 | YouTube_arm64.apk
+YouTube | 12.43.52 | com.google.android.youtube | 3333 | YouTube_arm_hdpi.apk
+YouTube | 12.43.52 | com.google.android.youtube | 3333 | YouTube_x86_hdpi.apk
+Clock | 5.1 (4224536) | com.google.android.deskclock | 3333 | DeskClockGoogle.apk
+Trusted Face | 7.1.1-3515457 | com.android.facelock | 3333 | FaceLock.apk
+Calculator | 7.4 (4413861) | com.google.android.calculator | 3333 | CalculatorGoogle.apk
+Android System WebView | 0.0.0.1 | com.google.android.webview | 3333 | WebViewStub.apk
+Android System WebView | 62.0.3202.84 | com.google.android.webview | 3333 | WebViewGoogle_x86_64.apk
+Android System WebView | 62.0.3202.84 | com.google.android.webview | 3333 | WebViewGoogle_arm.apk
+Android System WebView | 62.0.3202.84 | com.google.android.webview | 3333 | WebViewGoogle_arm64.apk
+Android System WebView | 62.0.3202.84 | com.google.android.webview | 3333 | WebViewGoogle_x86.apk
+Duo | 21.0.173407782.DR21_RC07 | com.google.android.apps.tachyon | 3333 | Duo_arm64.apk
+Duo | 21.0.173407782.DR21_RC07 | com.google.android.apps.tachyon | 3333 | Duo_x86.apk
+Duo | 21.0.173407782.DR21_RC07 | com.google.android.apps.tachyon | 3333 | Duo_x86_xxxhdpi.apk
+Duo | 21.0.173407782.DR21_RC07 | com.google.android.apps.tachyon | 3333 | Duo_x86_mdpi.apk
+Duo | 21.0.173407782.DR21_RC07 | com.google.android.apps.tachyon | 3333 | Duo_x86_xhdpi.apk
+Duo | 21.0.173407782.DR21_RC07 | com.google.android.apps.tachyon | 3333 | Duo_arm64_xxxhdpi.apk
+Duo | 21.0.173407782.DR21_RC07 | com.google.android.apps.tachyon | 3333 | Duo_arm_xhdpi.apk
+Duo | 21.0.173407782.DR21_RC07 | com.google.android.apps.tachyon | 3333 | Duo_arm_mdpi.apk
+Duo | 21.0.173407782.DR21_RC07 | com.google.android.apps.tachyon | 3333 | Duo_arm64_mdpi.apk
+Duo | 21.0.173407782.DR21_RC07 | com.google.android.apps.tachyon | 3333 | Duo_arm64_hdpi.apk
+Duo | 21.0.173407782.DR21_RC07 | com.google.android.apps.tachyon | 3333 | Duo_arm.apk
+Duo | 21.0.173407782.DR21_RC07 | com.google.android.apps.tachyon | 3333 | Duo_x86_hdpi.apk
+Duo | 21.0.173407782.DR21_RC07 | com.google.android.apps.tachyon | 3333 | Duo_arm_xxhdpi.apk
+Duo | 21.0.173407782.DR21_RC07 | com.google.android.apps.tachyon | 3333 | Duo_arm64_xxhdpi.apk
+Duo | 21.0.173407782.DR21_RC07 | com.google.android.apps.tachyon | 3333 | Duo_arm64_xhdpi.apk
+Duo | 21.0.173407782.DR21_RC07 | com.google.android.apps.tachyon | 3333 | Duo_arm_hdpi.apk
+Duo | 21.0.173407782.DR21_RC07 | com.google.android.apps.tachyon | 3333 | Duo_x86_xxhdpi.apk
+Duo | 21.0.173407782.DR21_RC07 | com.google.android.apps.tachyon | 3333 | Duo_arm_xxxhdpi.apk
+Gmail | 7.10.8.172533986.release | com.google.android.gm | 3333 | Gmail2_hdpi.apk
+Gmail | 7.10.8.172533986.release | com.google.android.gm | 3333 | Gmail2_mdpi.apk
+Gmail | 7.10.8.172533986.release | com.google.android.gm | 3333 | Gmail2_xhdpi.apk
+Gmail | 7.10.8.172533986.release | com.google.android.gm | 3333 | Gmail2.apk
+Gmail | 7.10.8.172533986.release | com.google.android.gm | 3333 | Gmail2_xxhdpi.apk
+TalkBack | 5.2.1 | com.google.android.marvin.talkback | 3333 | talkback.apk
+Google Keyboard | 5.1.18.125495799-preload-x86 | com.google.android.inputmethod.latin | 3333 | LatinImeGoogle_x86.apk
+Google Keyboard | 5.1.18.125495799-preload-x86_64 | com.google.android.inputmethod.latin | 3333 | LatinImeGoogle_x86_64.apk
+Google Keyboard | 5.1.18.125495799-preload-armeabi-v7a | com.google.android.inputmethod.latin | 3333 | LatinImeGoogle_arm.apk
+Google Keyboard | 5.1.18.125495799-preload-arm64-v8a | com.google.android.inputmethod.latin | 3333 | LatinImeGoogle_arm64.apk
+Phone | 13.0.171616398 | com.google.android.dialer | 3333 | GoogleDialer_arm64_xxxhdpi.apk
+Phone | 13.0.171616398 | com.google.android.dialer | 3333 | GoogleDialer_arm64_xxhdpi.apk
+Phone | 13.0.171616398 | com.google.android.dialer | 3333 | GoogleDialer_x86.apk
+Phone | 13.0.171616398 | com.google.android.dialer | 3333 | GoogleDialer_arm64.apk
+Phone | 13.0.171616398 | com.google.android.dialer | 3333 | GoogleDialer_x86_xxhdpi.apk
+Phone | 13.0.171616398 | com.google.android.dialer | 3333 | GoogleDialer_arm_xxxhdpi.apk
+Phone | 13.0.171616398 | com.google.android.dialer | 3333 | GoogleDialer_x86_xhdpi.apk
+Phone | 13.0.171616398 | com.google.android.dialer | 3333 | GoogleDialer_arm_hdpi.apk
+Phone | 13.0.171616398 | com.google.android.dialer | 3333 | GoogleDialer_x86_xxxhdpi.apk
+Phone | 13.0.171616398 | com.google.android.dialer | 3333 | GoogleDialer_arm64_mdpi.apk
+Phone | 13.0.171616398 | com.google.android.dialer | 3333 | GoogleDialer_x86_hdpi.apk
+Phone | 13.0.171616398 | com.google.android.dialer | 3333 | GoogleDialer_arm64_hdpi.apk
+Phone | 13.0.171616398 | com.google.android.dialer | 3333 | GoogleDialer_x86_mdpi.apk
+Phone | 13.0.171616398 | com.google.android.dialer | 3333 | GoogleDialer_arm_xxhdpi.apk
+Phone | 13.0.171616398 | com.google.android.dialer | 3333 | GoogleDialer_arm_mdpi.apk
+Phone | 13.0.171616398 | com.google.android.dialer | 3333 | GoogleDialer_arm64_xhdpi.apk
+Phone | 13.0.171616398 | com.google.android.dialer | 3333 | GoogleDialer_arm_xhdpi.apk
+Phone | 13.0.171616398 | com.google.android.dialer | 3333 | GoogleDialer_arm.apk
+Google Play Movies | 3.28.14 | com.google.android.videos | 3333 | Videos_x86.apk
+Google Play Movies | 3.28.14 | com.google.android.videos | 3333 | Videos_arm.apk
+Google Account Manager | 7.1.1-3515457 | com.google.android.gsf.login | 3333 | GoogleLoginService_default.apk
+Google Account Manager | 7.1.1-3515457 | com.google.android.gsf.login | 3333 | GoogleLoginService_device.apk
+Google Account Manager | 7.1.1-3515457 | com.google.android.gsf.login | 3333 | GoogleLoginService_tablet.apk
+Keep | 4.0.411.05.70 | com.google.android.keep | 3333 | Keep_x86.apk
+Keep | 4.0.411.05.40 | com.google.android.keep | 3333 | Keep_arm64.apk
+Keep | 4.0.411.05.30 | com.google.android.keep | 3333 | Keep_arm.apk
+Google Indic Keyboard | 3.2.0.125756904-preload-x86 | com.google.android.apps.inputmethod.hindi | 3333 | GoogleHindiIME_x86.apk
+Google Indic Keyboard | 3.2.0.125756904-preload-armeabi-v7a | com.google.android.apps.inputmethod.hindi | 3333 | GoogleHindiIME_arm.apk
+Google Indic Keyboard | 3.2.0.125756904-preload-arm64-v8a | com.google.android.apps.inputmethod.hindi | 3333 | GoogleHindiIME_arm64.apk
+Google Indic Keyboard | 3.2.0.125756904-preload-x86_64 | com.google.android.apps.inputmethod.hindi | 3333 | GoogleHindiIME_x86_64.apk
