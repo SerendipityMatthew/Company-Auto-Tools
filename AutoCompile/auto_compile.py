@@ -8,7 +8,7 @@
 import commands
 from enum import Enum
 
-from util import write_execute_result, send_result_mail
+from util import write_execute_result, send_result_mail, execute_command
 
 full_project_name = "5058I_ALAE"
 REPO_NAME = "ALPS-MP-N1.MP18-V1_AUS6739_66_N1_INHOUSE/"
@@ -32,73 +32,37 @@ FULL_PROJECT_OUT_DIR = "out/target/product/" + platform_name
 # BUILD_VARIANT =  user(default)
 BUILD_TYPE = Enum(ENG_TYPE, DEBUG_TYPE, USER_TYPE)
 
-checkout_status, checkout_result = commands.getstatusoutput("svn checkout %s" % svn_repo_root + svn_repo_module)
-print "command exec status = %s, result %s " % (checkout_status, checkout_result)
-
-if checkout_status != 0:
-    yield_file_name = write_execute_result(checkout_result)
-    send_result_mail(yield_file_name)
-    raise RuntimeError(SVN_REPO_NOT_EXIST)
-else:
-    print SVN_REPO_CHECKOUT_SUCCESSFUL
+svn_checkout_command = "svn checkout %s" % svn_repo_root + svn_repo_module
+execute_command(svn_checkout_command)
 
 if full_project_name.__contains__('_'):
     project_name_split = full_project_name.split('_')
     sub_project_name = project_name_split[0]
 
-# ./choosebranch 5058I
-# ./choosebranch 5058I_ALAE
+# ./choosebranch_auto.sh 5058I
+choose_sub_branch_command = "cd %s && ./choosebranch.sh %s " % (REPO_NAME, sub_project_name)
 
-sub_project_status, sub_project_result = commands.getstatusoutput(
-    "cd %s && ./choosebranch.sh %s" % (REPO_NAME, sub_project_name))
-print "command exec status = %s, result %s " % (sub_project_status, sub_project_result)
-if sub_project_status != 0:
-    yield_file_name = write_execute_result(sub_project_result)
-    send_result_mail(yield_file_name)
-    raise RuntimeError()
+execute_command(choose_sub_branch_command)
+choose_full_branch_command = "cd %s && ./choosebranch.sh %s" % (REPO_NAME, full_project_name)
 
-## ./choosebranch_auto
-full_project_status, full_project_result = commands.getstatusoutput(
-    "cd %s && ./choosebranch.sh %s" % (REPO_NAME, full_project_name))
-print "command exec status = %s, result %s " % (full_project_status, full_project_result)
-if full_project_status != 0:
-    yield_file_name = write_execute_result(full_project_result)
-    send_result_mail(yield_file_name)
-    raise RuntimeError()
+# ./choosebranch_auto.sh 5058I_ALAE
+execute_command(choose_full_branch_command)
 
 # buildmodem
-modem_build_status, modem_build_result = commands.getstatusoutput("cd %s && ./buildmodem_L05A.sh")
-print "command exec status = %s, result %s " % (modem_build_status, modem_build_result)
-if modem_build_status != 0:
-    yield_file_name = write_execute_result(modem_build_result)
-    send_result_mail(yield_file_name)
-    raise RuntimeError
+build_modem_command = "cd %s && ./buildmodem_L05A.sh"
+execute_command(build_modem_command)
 
-# lunch full_
-lunch_status, lunch_result = commands.getstatusoutput(
-    "cd %s && lunch full_%s-%s" % (REPO_NAME, platform_name, build_variant))
-print "command exec status = %s, result %s " % (lunch_status, lunch_result)
-if lunch_status != 0:
-    yield_file_name = write_execute_result(lunch_result)
-    send_result_mail(yield_file_name)
-    raise RuntimeError
+# lunch full_aus6739_66_n1-user
+lunch_full_project = "cd %s && lunch full_%s-%s" % (REPO_NAME, platform_name, build_variant)
+execute_command(lunch_full_project)
 
 # make -j8
-build_status, build_result = commands.getstatusoutput("cd %s && make -j8 %s" % (REPO_NAME, module_name))
-print "command exec status = %s, result %s " % (build_status, build_result)
+build_full_project = "cd %s && make -j8 %s" % (REPO_NAME, module_name)
 # send the build result in any situation
-yield_file_name = write_execute_result(build_result)
-send_result_mail(yield_file_name)
-if build_status != 0:
-    raise RuntimeError
+execute_command(build_full_project, always_send_email=True)
 
-
+# make otapackage -j8
 module_name = "otapackage"
-otapackage_status, otapackage_result = commands.getstatusoutput("cd %s && make -j8  %s" % (REPO_NAME, module_name))
+ota_command = "cd %s && make -j8  %s" % (REPO_NAME, module_name)
 # send the build result in any situation
-print "command exec status = %s, result %s " % (otapackage_status, otapackage_result)
-yield_file_name = write_execute_result(otapackage_result)
-
-send_result_mail(yield_file_name)
-if otapackage_status != 0:
-    raise RuntimeError()
+execute_command(ota_command, always_send_email=True)

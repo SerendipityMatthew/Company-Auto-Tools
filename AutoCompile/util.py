@@ -9,8 +9,8 @@ password = 'itjxybikiywtdgch'
 user = '3209534840@qq.com'
 
 
-def write_execute_result(execute_result):
-    file_name = execute_result + ".txt"
+def write_execute_result(execute_result, file_name="build"):
+    file_name = file_name + ".txt"
     with open(file_name, 'w') as f:
         f.write(execute_result)
 
@@ -33,12 +33,13 @@ def send_result_mail(build_log_file):
     server.quit()
 
 
-def execute_command(compile_command, always_send_email):
+def execute_command(compile_command, always_send_email=False):
     execute_status, execute_result = commands.getstatusoutput(compile_command)
     print "the command = %s command exec status = %s, result %s " % (compile_command, execute_status, execute_result)
     file_dir = write_execute_result(execute_result)
     if always_send_email:
         send_result_mail(file_dir)
     if execute_status != 0:
-        send_result_mail()
+        if not always_send_email:
+            send_result_mail(file_dir)
         raise RuntimeError()
