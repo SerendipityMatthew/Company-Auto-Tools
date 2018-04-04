@@ -40,6 +40,7 @@ def execute_command(compile_command, always_send_email=False):
     if always_send_email:
         send_result_mail(file_dir)
     if execute_status != 0:
+        # we will send email when we got a wrong
         if not always_send_email:
             send_result_mail(file_dir)
         raise RuntimeError()
