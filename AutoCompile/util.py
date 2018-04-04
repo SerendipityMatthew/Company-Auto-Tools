@@ -1,3 +1,4 @@
+import commands
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -30,3 +31,14 @@ def send_result_mail(build_log_file):
     server.login(sender, password)
     server.sendmail(sender, [user, ], compiling_report_message.as_string())
     server.quit()
+
+
+def execute_command(compile_command, always_send_email):
+    execute_status, execute_result = commands.getstatusoutput(compile_command)
+    print "the command = %s command exec status = %s, result %s " % (compile_command, execute_status, execute_result)
+    file_dir = write_execute_result(execute_result)
+    if always_send_email:
+        send_result_mail(file_dir)
+    if execute_status != 0:
+        send_result_mail()
+        raise RuntimeError()
