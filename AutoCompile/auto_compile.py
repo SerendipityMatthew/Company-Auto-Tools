@@ -68,7 +68,6 @@ if full_project_status != 0:
 
 # buildmodem
 modem_build_status, modem_build_result = commands.getstatusoutput("cd %s && ./buildmodem_L05A.sh")
-
 print "command exec status = %s, result %s " % (modem_build_status, modem_build_result)
 if modem_build_status != 0:
     yield_file_name = write_execute_result(modem_build_result)
@@ -87,15 +86,19 @@ if lunch_status != 0:
 # make -j8
 build_status, build_result = commands.getstatusoutput("cd %s && make -j8 %s" % (REPO_NAME, module_name))
 print "command exec status = %s, result %s " % (build_status, build_result)
+# send the build result in any situation
+yield_file_name = write_execute_result(build_result)
+send_result_mail(yield_file_name)
 if build_status != 0:
-    yield_file_name = write_execute_result(build_result)
-    send_result_mail(yield_file_name)
     raise RuntimeError
+
 
 module_name = "otapackage"
 otapackage_status, otapackage_result = commands.getstatusoutput("cd %s && make -j8  %s" % (REPO_NAME, module_name))
+# send the build result in any situation
 print "command exec status = %s, result %s " % (otapackage_status, otapackage_result)
+yield_file_name = write_execute_result(otapackage_result)
+
+send_result_mail(yield_file_name)
 if otapackage_status != 0:
-    yield_file_name = write_execute_result(otapackage_result)
-    send_result_mail(yield_file_name)
     raise RuntimeError()
