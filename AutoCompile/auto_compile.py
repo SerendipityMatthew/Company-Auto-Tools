@@ -111,19 +111,19 @@ def svn_checkout_parallel_with_thread():
 def svn_checkout_parallel_with_map():
     status, result = commands.getstatusoutput("svn list %s" % svn_repo_root)
     file_list = result.split("\n")
-    command_list = []
-    command_list_file = []
+    command_list = list()
+    command_list_file = list()
     command_list_file.append("svn checkout --depth=empty %s " % svn_repo_root + REPO_NAME)
+
     for f in file_list:
         if is_file(f):
-            print f
             command_list_file.append('cd %s && svn update %s' % (REPO_NAME, f))
         else:
             command_list.append('cd %s && svn checkout %s%s' % (REPO_NAME, svn_repo_root, f))
 
     # svn update , will produce the svn lock file, so we need queue the update task
-    for file in command_list_file:
-        execute_command(file)
+    for f in command_list_file:
+        execute_command(f)
 
     pool = multiprocessing.Pool(processes=8)
     pool.map(execute_command, command_list)
@@ -132,14 +132,8 @@ def svn_checkout_parallel_with_map():
 
 
 def is_file(f):
-    if f.__contains__(".sh") \
-            or f.__contains__('addSign') \
-            or f.__contains__(".bp") \
-            or f.__contains__('Makefile') \
-            or f.__contains__('.txt') \
-            or f.__contains__('.bash') \
-            or f.__contains__('.xlsx'):
-        return True
+    status, result = commands.getstatusoutput("svn list  --depth=files %s" % svn_repo_root)
+    return result.__contains__(f)
 
 
 if __name__ == '__main__':
