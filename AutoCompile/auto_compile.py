@@ -8,9 +8,9 @@
 import commands
 import sys
 
-from SvnCheckoutThread import SvnCheckoutThread
 from enum import Enum
 
+from SvnCheckoutThread import SvnCheckoutThread
 from util import execute_command
 
 REPO_NAME = "ALPS-MP-N1.MP18-V1_AUS6739_66_N1_INHOUSE/"
@@ -96,7 +96,7 @@ def execute_all_command():
     execute_command(ota_command, always_send_email=True)
 
 
-def svn_checkout_parallel():
+def svn_checkout_parallel_with_thread():
     status, result = commands.getstatusoutput("svn list %s" % svn_repo_root)
     file_list = result.split("\n")
 
@@ -107,7 +107,33 @@ def svn_checkout_parallel():
         checkout_thread.start()
 
 
+def svn_checkout_parallel_with_map():
+    status, result = commands.getstatusoutput("svn list %s" % svn_repo_root)
+    file_list = result.split("\n")
+    command_list = []
+    command_list.append("svn checkout --depth=empty %s " % svn_repo_root + REPO_NAME)
+    for f in file_list:
+        if is_file(f):
+            print f
+            command_list.append('cd %s && svn update %s' % (REPO_NAME, f))
+        else:
+            command_list.append(("cd %s && svn checkout %s%s" % (REPO_NAME, svn_repo_root, f)))
+    map(execute_command, command_list)
+
+
+def is_file(f):
+    if f.__contains__(".sh") \
+            or f.__contains__('addSign') \
+            or f.__contains__(".bp") \
+            or f.__contains__('Makefile') \
+            or f.__contains__('.txt') \
+            or f.__contains__('.bash') \
+            or f.__contains__('.xlsx'):
+        return True
+
+
 if __name__ == '__main__':
     FULL_PROJECT_NAME, BUILD_VARIANT = get_sys_args()
-    svn_checkout_parallel()
+    svn_checkout_parallel_with_thread()
+    svn_checkout_parallel_with_map()
     execute_all_command()
