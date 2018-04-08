@@ -6,12 +6,11 @@
 # 6. make diff package
 # 7. zip file
 import commands
-import getopt
-
 import sys
+
+from SvnCheckoutThread import SvnCheckoutThread
 from enum import Enum
 
-from AutoCompile.SvnCheckoutThread import SvnCheckoutThread
 from util import execute_command
 
 REPO_NAME = "ALPS-MP-N1.MP18-V1_AUS6739_66_N1_INHOUSE/"
