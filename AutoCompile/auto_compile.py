@@ -8,6 +8,7 @@
 import commands
 import sys
 
+import multiprocessing
 from enum import Enum
 
 from SvnCheckoutThread import SvnCheckoutThread
@@ -64,10 +65,10 @@ def execute_all_command():
         sub_project_name = project_name_split[0]
 
     # ./choosebranch_auto.sh 5058I
-    choose_sub_branch_command = "cd %s && ./choosebranch.sh %s " % (REPO_NAME, sub_project_name)
+    choose_sub_branch_command = "cd %s && ./choosebranch_auto.sh %s " % (REPO_NAME, sub_project_name)
 
     execute_command(choose_sub_branch_command)
-    choose_full_branch_command = "cd %s && ./choosebranch.sh %s" % (REPO_NAME, FULL_PROJECT_NAME)
+    choose_full_branch_command = "cd %s && ../choosebranch_auto.sh %s" % (REPO_NAME, FULL_PROJECT_NAME)
 
     # ./choosebranch_auto.sh 5058I_ALAE
     execute_command(choose_full_branch_command)
@@ -111,14 +112,23 @@ def svn_checkout_parallel_with_map():
     status, result = commands.getstatusoutput("svn list %s" % svn_repo_root)
     file_list = result.split("\n")
     command_list = []
-    command_list.append("svn checkout --depth=empty %s " % svn_repo_root + REPO_NAME)
+    command_list_file = []
+    command_list_file.append("svn checkout --depth=empty %s " % svn_repo_root + REPO_NAME)
     for f in file_list:
         if is_file(f):
             print f
-            command_list.append('cd %s && svn update %s' % (REPO_NAME, f))
+            command_list_file.append('cd %s && svn update %s' % (REPO_NAME, f))
         else:
-            command_list.append(("cd %s && svn checkout %s%s" % (REPO_NAME, svn_repo_root, f)))
-    map(execute_command, command_list)
+            command_list.append('cd %s && svn checkout %s%s' % (REPO_NAME, svn_repo_root, f))
+
+    # svn update , will produce the svn lock file, so we need queue the update task
+    for file in command_list_file:
+        execute_command(file)
+
+    pool = multiprocessing.Pool(processes=8)
+    pool.map(execute_command, command_list)
+    pool.close()
+    pool.join()
 
 
 def is_file(f):
@@ -134,6 +144,6 @@ def is_file(f):
 
 if __name__ == '__main__':
     FULL_PROJECT_NAME, BUILD_VARIANT = get_sys_args()
-    svn_checkout_parallel_with_thread()
+    # svn_checkout_parallel_with_thread()
     svn_checkout_parallel_with_map()
     execute_all_command()
