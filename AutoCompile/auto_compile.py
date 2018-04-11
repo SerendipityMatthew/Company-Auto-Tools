@@ -28,6 +28,7 @@ DEBUG_TYPE = "user_debug"
 USER_TYPE = "user"
 BUILD_LOG_FILE = 'build.txt'
 FULL_PROJECT_NAME = "5058A"
+CHECKOUT_NEW_REPO = True
 
 FULL_PROJECT_OUT_DIR = "out/target/product/" + platform_name
 
@@ -59,18 +60,24 @@ def get_sys_args():
 def read_args_from_config():
     with open("config.txt", 'r') as config_file:
         for line in config_file.readlines():
+            variant = line.split("=")[-1].strip("\n").strip(" ")
+            print "read_args_from_config: global variant for repo: variant = %s " % variant
             if line.__contains__("project_svn_path="):
                 global SVN_REPO_PATH
-                SVN_REPO_PATH = line.split("=")[-1].strip("\n")
+                SVN_REPO_PATH = variant
             if line.__contains__("build_type"):
                 global BUILD_VARIANT
-                BUILD_VARIANT = line.split("=")[-1].strip("\n")
+                BUILD_VARIANT = variant
             if line.__contains__("project_name"):
                 global FULL_PROJECT_NAME
-                FULL_PROJECT_NAME = line.split("=")[-1].strip("\n")
+                FULL_PROJECT_NAME = variant
             if line.__contains__("repo_name"):
                 global REPO_NAME
-                REPO_NAME = line.split("=")[-1].strip("\n")
+                REPO_NAME = variant
+            if line.__contains__("checkout_new_repo"):
+                global CHECKOUT_NEW_REPO
+                CHECKOUT_NEW_REPO = variant
+
 
 
 def execute_all_command():
