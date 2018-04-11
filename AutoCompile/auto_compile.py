@@ -103,8 +103,8 @@ def execute_all_command():
     build_modem_command = "cd %s && ./buildmodem_L05A.sh" % REPO_NAME
     execute_command(build_modem_command)
 
-    # source build/envsetup.sh
-    source_project = "cd %s && source build/envsetup.sh" % REPO_NAME
+    # source build/envsetup.sh  can not use source command, we use "."
+    source_project = "cd %s && . build/envsetup.sh" % REPO_NAME
     execute_command(source_project)
 
     # lunch full_aus6739_66_n1-user
@@ -168,6 +168,7 @@ if __name__ == '__main__':
     # FULL_PROJECT_NAME, BUILD_VARIANT = get_sys_args()
     read_args_from_config()
     if CHECKOUT_NEW_REPO:
+        # can't use both, thread or map
         # svn_checkout_parallel_with_thread()
         svn_checkout_parallel_with_map()
     execute_all_command()
