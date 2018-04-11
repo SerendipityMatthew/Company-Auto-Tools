@@ -90,6 +90,10 @@ def execute_all_command():
         project_name_split = FULL_PROJECT_NAME.split('_')
         sub_project_name = project_name_split[0]
 
+    # clean repo
+    clean_repo = 'cd %s && cd tools && ./svn_clear.sh Yes' % REPO_NAME
+    execute_command(clean_repo)
+
     # for example: ./choosebranch_auto.sh 5058I
     choose_sub_branch_command = "cd %s && ./choosebranch_auto.sh %s " % (REPO_NAME, sub_project_name)
 
