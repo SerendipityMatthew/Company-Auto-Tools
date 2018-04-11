@@ -76,8 +76,10 @@ def read_args_from_config():
                 REPO_NAME = variant
             if line.__contains__("checkout_new_repo"):
                 global CHECKOUT_NEW_REPO
-                CHECKOUT_NEW_REPO = variant
-
+                if variant.lower().__contains__("true"):
+                    CHECKOUT_NEW_REPO = True
+                else:
+                    CHECKOUT_NEW_REPO = False
 
 
 def execute_all_command():
@@ -98,11 +100,11 @@ def execute_all_command():
     execute_command(choose_full_branch_command)
 
     # buildmodem
-    build_modem_command = "cd %s && ./buildmodem_L05A.sh"
+    build_modem_command = "cd %s && ./buildmodem_L05A.sh" % REPO_NAME
     execute_command(build_modem_command)
 
     # source build/envsetup.sh
-    source_project = "cd %s && source build/envsetup.sh"
+    source_project = "cd %s && source build/envsetup.sh" % REPO_NAME
     execute_command(source_project)
 
     # lunch full_aus6739_66_n1-user
