@@ -88,13 +88,13 @@ def execute_all_command():
         project_name_split = FULL_PROJECT_NAME.split('_')
         sub_project_name = project_name_split[0]
 
-    # ./choosebranch_auto.sh 5058I
+    # for example: ./choosebranch_auto.sh 5058I
     choose_sub_branch_command = "cd %s && ./choosebranch_auto.sh %s " % (REPO_NAME, sub_project_name)
 
     execute_command(choose_sub_branch_command)
     choose_full_branch_command = "cd %s && ./choosebranch_auto.sh %s" % (REPO_NAME, FULL_PROJECT_NAME)
 
-    # ./choosebranch_auto.sh 5058I_ALAE
+    # for example: ./choosebranch_auto.sh 5058I_ALAE
     execute_command(choose_full_branch_command)
 
     # buildmodem
@@ -165,6 +165,7 @@ def is_file(f):
 if __name__ == '__main__':
     # FULL_PROJECT_NAME, BUILD_VARIANT = get_sys_args()
     read_args_from_config()
-    # svn_checkout_parallel_with_thread()
-    svn_checkout_parallel_with_map()
+    if CHECKOUT_NEW_REPO:
+        # svn_checkout_parallel_with_thread()
+        svn_checkout_parallel_with_map()
     execute_all_command()
