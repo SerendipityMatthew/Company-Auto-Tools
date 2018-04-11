@@ -2,4 +2,4 @@ project_svn_path=svn://192.168.29.29/repository/L05A/Trunk/ALPS-MP-N1.MP18-V1_AU
 build_type=user
 project_name=5058I_ALAE1
 repo_name=ALPS-MP-N1.MP18-V1_AUS6739_66_N1_INHOUSE
-checkout_new_repo=true
+checkout_new_repo=false
