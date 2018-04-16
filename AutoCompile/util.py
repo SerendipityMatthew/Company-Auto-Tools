@@ -23,6 +23,7 @@ USER_TYPE = "user"
 BUILD_LOG_FILE = 'build.txt'
 FULL_PROJECT_NAME = "5058A"
 CHECKOUT_NEW_REPO = True
+IS_COMPILE_PROJECT = False
 BUILD_TYPE = Enum(ENG_TYPE, DEBUG_TYPE, USER_TYPE)
 FULL_PROJECT_OUT_DIR = "out/target/product/" + PLATFORM_NAME
 from SvnCheckoutThread import SvnCheckoutThread
@@ -92,8 +93,13 @@ def read_args_from_config():
                     CHECKOUT_NEW_REPO = True
                 else:
                     CHECKOUT_NEW_REPO = False
-
-                return CHECKOUT_NEW_REPO
+            if line.__contains__("compile_project"):
+                global IS_COMPILE_PROJECT
+                if variant.lower().__contains__("true"):
+                    IS_COMPILE_PROJECT = True
+                else:
+                    IS_COMPILE_PROJECT = False
+    return CHECKOUT_NEW_REPO, IS_COMPILE_PROJECT
 
 
 def is_file(f):
@@ -199,3 +205,9 @@ def svn_checkout_parallel_with_map():
     pool.map(execute_command, command_list)
     pool.close()
     pool.join()
+
+
+def svn_checkout_new_repo():
+    checkout_command = "svn checkout %s " % SVN_REPO_PATH
+    execute_command(checkout_command)
+
