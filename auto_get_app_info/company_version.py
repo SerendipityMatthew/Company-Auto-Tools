@@ -61,7 +61,7 @@ class AppFile(object):
 
 
 def is_file_exists(filepath):
-    if os.path.exists(googleAppFilePath):
+    if os.path.exists(filepath):
         print(" file path exist")
         return True
     else:
@@ -121,9 +121,9 @@ def get_app_base_info(app_file_path):
     return app_name, version_name, package_name
 
 
-def yield_app_instance(custom_App_File_Dir):
+def yield_app_instance(custom_app_file_dir):
     # a path
-    app_files = get_app_file_name_info(custom_App_File_Dir, [])
+    app_files = get_app_file_name_info(custom_app_file_dir, [])
     print(app_files)
     # for app_file in app_files:
     app_file_list = []
